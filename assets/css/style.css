@@ -1,0 +1,247 @@
+/* Import der Schriften via Google */
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Fjalla+One&family=Work+Sans:wght@100;300;400;600&display=swap");
+
+/* Generelle Styleanweisungen */
+body {
+  /* Setzt den Margin auf 0 */
+  margin: 0;
+  /* Definiert den Defaultschrifttyp */
+  font-family: "Work Sans", sans-serif;
+  /* Default-Schriftgröße für Verwendung rem */
+  font-size: 18px;
+}
+a {
+  /* Entfernt die Unterstriche bei Links */
+  text-decoration: none;
+}
+ul {
+  /* Entfernt die Listenpunkte */
+  list-style: none;
+}
+button {
+  /* Entfernen der Hintergründe bei Buttons, Großbuchstaben und Schrift by default */
+  background-color: transparent;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-family: "Fjalla One", sans-serif;
+  padding: 18px 27px;
+  margin-top: 27px;
+}
+button:focus {
+  outline: 0 !important;
+}
+
+/* Default-Werte bei Schriften */
+h1,
+h2,
+h3 {
+  font-family: "Didact Gothic", sans-serif;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 6.5rem;
+}
+h3 {
+  font-size: 6.5rem;
+  color: #fff;
+  font-weight: lighter;
+}
+h4 {
+  font-weight: 300;
+}
+article > span,
+h4 {
+  color: #9e9e9e;
+  font-weight: 300;
+}
+article > span:before {
+  content: "\002014";
+  padding-right: 9px;
+}
+/* Headerbereich CSS */
+header {
+  text-align: center;
+  padding-top: 9px;
+}
+header > span {
+  font-size: 1.2rem;
+}
+header h1 span:before {
+  /* Ich bin kein Freund von <br> generell in Überschriften, schon garnicht in der h1, deswegen ein erzwungener Break in der h1 über einen span */
+  content: "\A";
+  white-space: pre;
+}
+
+/* Main CSS */
+main h2 {
+  text-align: center;
+}
+main h3 {
+  line-height: 0.75rem;
+}
+main section {
+  padding: 10% 15%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+/* Hintergrundbilder einzelner Assets */
+
+/* Asset 1 Orbis */
+main section:first-of-type {
+  background: url(../../assets/img/portfolio2.jpg);
+}
+/* Asset 2 Rollr */
+main section:nth-of-type(2) {
+  background: url(../../assets/img/portfolio3.png);
+}
+/* Asset 3 Galito's */
+main section:nth-of-type(3) {
+  background: url(../../assets/img/portfolio4.jpg);
+}
+/* Asset 1 Tretto */
+main section:last-of-type {
+  background: url(../../assets/img/portfolio5.png);
+}
+
+/* Da gelieferte Bilder heller als in der Vorgabe, diese Lösung mit Backgroundblend */
+main section:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.616);
+  background-blend-mode: darken;
+}
+
+main section:nth-of-type(even) h3,
+main section:nth-of-type(even) h4,
+main section:nth-of-type(even) span {
+  color: #000;
+}
+
+main section:nth-of-type(odd) button {
+  color: #fff;
+  border-color: #fff;
+}
+main section:nth-of-type(odd) button:hover {
+  color: #000;
+  background-color: #fff;
+}
+main section p {
+  text-align: right;
+  font-size: 9rem;
+  font-family: "Fjalla One", sans-serif;
+  color: #9e9e9e;
+  opacity: 0.3;
+  line-height: 0;
+  font-weight: bold;
+}
+main section:nth-of-type(even) p {
+  opacity: unset;
+}
+main section:nth-of-type(odd) button:hover + p {
+  opacity: 1;
+  color: #fff;
+}
+
+/* Aside CSS*/
+aside {
+  background-color: #000;
+}
+aside h2 {
+  text-align: center;
+  color: #fff;
+  text-transform: none;
+  font-size: 10rem;
+  margin: 0;
+  letter-spacing: 0.5rem;
+  padding-top: 5%;
+  font-weight: lighter;
+}
+aside p {
+  color: #9e9e9e;
+  padding: 10% 10% 10% 0;
+  /* padding: 72px 36px 36px 0; */
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+}
+aside article div {
+  width: 50vw;
+  margin-left: 45vw;
+  padding-bottom: 90px;
+}
+aside a {
+  color: #fff;
+  font-size: 3.5rem;
+}
+aside a:hover {
+  text-decoration: underline;
+}
+
+/* Footer CSS */
+footer {
+  text-align: center;
+}
+footer ul {
+  padding: 5% 0;
+}
+footer ul li {
+  line-height: 18rem;
+}
+footer ul li a {
+  font-size: 6.5rem;
+  color: #000;
+  line-height: 12.5rem;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+/* Footer-Icon animiert - nur in Chrome sichtbar */
+footer img {
+  width: 18px;
+  animation: beat 1.5s ease 0s infinite;
+}
+
+footer img:before {
+  z-index: -2;
+  animation: beat-before 1.5s ease-out 200ms infinite;
+}
+
+footer img:after {
+  z-index: -1;
+  animation: beat-after 1.5s ease-out 400ms infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes beat-before {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes beat-after {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+#9e9e9e,
+#fff,
+#000,
+#333,
+#666;
+font-family: "Didact Gothic", sans-serif;
+font-family: "Fjalla One", sans-serif;
+font-family: "Work Sans", sans-serif;
