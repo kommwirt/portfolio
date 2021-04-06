@@ -82,7 +82,7 @@ main h2 {
 main h3 {
   line-height: 0.75rem;
 }
-main section {
+main article {
   padding: 10% 15%;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -90,47 +90,47 @@ main section {
 /* Hintergrundbilder einzelner Assets */
 
 /* Asset 1 Orbis */
-main section:first-of-type {
+main article:first-of-type {
   background: url(../../assets/img/portfolio2.jpg);
 }
 /* Asset 2 Rollr */
-main section:nth-of-type(2) {
+main article:nth-of-type(2) {
   background: url(../../assets/img/portfolio3.png);
 }
 /* Asset 3 Galito's */
-main section:nth-of-type(3) {
+main article:nth-of-type(3) {
   background: url(../../assets/img/portfolio4.jpg);
 }
 /* Asset 1 Tretto */
-main section:last-of-type {
+main article:last-of-type {
   background: url(../../assets/img/portfolio5.png);
 }
 
 /* Da gelieferte Bilder heller als in der Vorgabe, diese Lösung mit Backgroundblend */
-main section:nth-of-type(odd) {
+main article:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.616);
   background-blend-mode: darken;
 }
 
-main section:nth-of-type(even) h3,
-main section:nth-of-type(even) h4,
-main section:nth-of-type(even) span {
+main article:nth-of-type(even) h3,
+main article:nth-of-type(even) h4,
+main article:nth-of-type(even) span {
   color: #000;
 }
 
-main section:nth-of-type(odd) button {
+main article:nth-of-type(odd) button {
   color: #fff;
   border-color: #fff;
 }
-main section:nth-of-type(odd) button:hover {
+main article:nth-of-type(odd) button:hover {
   color: #000;
   background-color: #fff;
 }
-main section:nth-of-type(even) button:hover {
+main article:nth-of-type(even) button:hover {
   color: #fff;
   background-color: #000;
 }
-main section p {
+main article p {
   text-align: right;
   font-size: 9rem;
   font-family: "Fjalla One", sans-serif;
@@ -139,14 +139,14 @@ main section p {
   line-height: 0;
   font-weight: bold;
 }
-main section:nth-of-type(even) p {
+main article:nth-of-type(even) p {
   opacity: unset;
 }
-main section:nth-of-type(odd) button:hover + p {
+main article:nth-of-type(odd) button:hover + p {
   opacity: 1;
   color: #fff;
 }
-main section:nth-of-type(even) button:hover + p {
+main article:nth-of-type(even) button:hover + p {
   opacity: 1;
   color: #000;
 }
